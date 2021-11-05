@@ -15,15 +15,15 @@ The function should:
   Example createMenuItem('tacos', 8, 'Lunch') should return {name: 'tacos', price: 8, category: 'Lunch'}
 */
 
-// function createMenuItem(name, price, category){
-//     /*Your code here*/
-//     return {
-//       name: name,
-//       price: price,
-//       category: category
-//     };
+function createMenuItem(name, price, category){
+    /*Your code here*/
+    return {
+      name: name,
+      price: price,
+      category: category
+    };
     
-// }
+}
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -59,9 +59,13 @@ const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  
+  discount: function (school){ 
+    if (school === 'teacher' || school === 'student') {return this.price * 0.75}
+    else {return this.price * 0.9};
+   }
 }
 
+console.log(burger.discount());
 
 
 ///////////////Reviews (MVP)///////////////////
